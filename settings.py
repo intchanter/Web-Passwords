@@ -77,3 +77,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
 )
+
+# Optionally override settings for development below.  That allows this file
+# to only contain the production settings and avoids the problems with trying
+# to keep multiple environment settings in one file.  localsettings.py should
+# exist outside of version control.
+try:
+    from localsettings import *
+except ImportError:
+    pass
