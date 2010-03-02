@@ -1,5 +1,11 @@
 # Django settings for passwords project.
 
+# This file should get all non-sensitive production settings.
+# DATABASE_PASSWORD will go in localsettings.py, outside version control.
+
+# Shorten specifying full paths
+# TODO: find this code
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -82,4 +88,16 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+    'passwords.sitepass',
 )
+
+# Optionally override settings for development below.  That allows this file
+# to only contain the production settings and avoids the problems with trying
+# to keep multiple environment settings in one file.  localsettings.py should
+# exist outside of version control.
+try:
+    from localsettings import *
+except ImportError:
+    pass
