@@ -1,5 +1,11 @@
 # Django settings for passwords project.
 
+# This file should get all non-sensitive production settings.
+# DATABASE_PASSWORD will go in localsettings.py, outside version control.
+
+# Shorten specifying full paths
+# TODO: find this code
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -9,12 +15,18 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+# 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_ENGINE = 'mysql'
+# Or path to database file if using sqlite3.
+DATABASE_NAME = 'intchant_passwords'
+# Not used with sqlite3.
+DATABASE_USER = 'intchant_passwd'
+# Not used with sqlite3.
+DATABASE_PASSWORD = ''
+# Set to empty string for localhost. Not used with sqlite3.
+DATABASE_HOST = ''
+# Set to empty string for default. Not used with sqlite3.
+DATABASE_PORT = ''
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -76,6 +88,9 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+    'passwords.sitepass',
 )
 
 # Optionally override settings for development below.  That allows this file
