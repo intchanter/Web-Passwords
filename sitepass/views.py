@@ -26,7 +26,7 @@ def joomla(request):
 	    ok = False
         # Handle form data
 	if ok:
-	    salt = randstring(string.ascii_letters + string.digits, 20)
+	    salt = randstring(string.ascii_letters + string.digits, 32)
 	    hash = md5(password + salt).hexdigest() + ':' + salt
     return render_to_response('joomla.html', {'title': 'Joomla Password Generation Utility', 'hash': hash, 'error': error})
 
