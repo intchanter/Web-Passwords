@@ -5,16 +5,13 @@
 <body>
 <h1>{{ title }}</h1>
 {% if hash %}
-<div class="" id="">
+<div class="result">
   <dl>
     <dt>Database entry:</dt>
     <dd>{{ hash }}</dd>
   </dl>
 </div>
 {% endif %}
-<form action="" method="POST">
-  <label for="password"><input type="text" value="" id="password" name="password" />
-  <input type="submit" name="submit" value="Generate!" />
-</form>
+{{ form }}
 </body>
 </html>
