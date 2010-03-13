@@ -12,6 +12,17 @@ def randstring(charset, length):
         chars.append(choice(charset))
     return ''.join(chars)
 
+def oscommerce(request):
+    hash = None
+    form = forms.OSCommerceForm()
+    if request.method == 'POST':
+        form = forms.OSCommerceForm(request.POST)
+        if form.is_valid():
+            password = string.strip(request.POST['password'])
+            salt = randstring(string.ascii_letters + string.digits, 2)
+            hash = md5(salt + password).hexdigest() + ':' + salt
+    return render_to_response('oscommerce.html', {'title': 'osCommerce Password Generation Utility', 'hash': hash, 'form': form})
+
 def joomla(request):
     hash = None
     form = forms.JoomlaForm()
