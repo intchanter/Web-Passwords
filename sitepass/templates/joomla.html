@@ -12,6 +12,11 @@
   </dl>
 </div>
 {% endif %}
-{{ form }}
+<div class="password_form">
+<form>
+  {{ form.as_p }}
+  <p><input type="submit" value="Submit" /></p>
+</form>
+</div>
 </body>
 </html>
