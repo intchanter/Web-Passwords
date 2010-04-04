@@ -1,7 +1,13 @@
 from django import forms
 
-class JoomlaForm(forms.Form):
+class BasicForm(forms.Form):
     password = forms.CharField()
 
-class OSCommerceForm(forms.Form):
-    password = forms.CharField()
+class JoomlaForm(BasicForm):
+    pass
+
+class OSCommerceForm(BasicForm):
+    pass
+
+class Concrete5Form(BasicForm):
+    salt = forms.CharField()

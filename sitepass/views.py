@@ -21,7 +21,7 @@ def oscommerce(request):
             password = string.strip(request.POST['password'])
             salt = randstring(string.ascii_letters + string.digits, 2)
             hash = md5(salt + password).hexdigest() + ':' + salt
-    return render_to_response('oscommerce.html', {'title': 'osCommerce Password Generation Utility', 'hash': hash, 'form': form})
+    return render_to_response('sitepass.html', {'title': 'osCommerce Password Generation Utility', 'hash': hash, 'form': form})
 
 def joomla(request):
     hash = None
@@ -32,9 +32,15 @@ def joomla(request):
             password = string.strip(request.POST['password'])
             salt = randstring(string.ascii_letters + string.digits, 32)
             hash = md5(password + salt).hexdigest() + ':' + salt
-    return render_to_response('joomla.html', {'title': 'Joomla Password Generation Utility', 'hash': hash, 'form': form})
+    return render_to_response('sitepass.html', {'title': 'Joomla Password Generation Utility', 'hash': hash, 'form': form})
 
 def concrete5(request):
+    hash = None
+    form = forms.Concrete5Form()
     if request.method == 'POST':
-        pass
-    return render_to_response()
+        form = forms.Concrete5Form(request.POST)
+        if form.is_valid():
+            password = string.strip(request.POST['password'])
+            salt = string.strip(request.POST['salt'])
+            hash = md5(password + ':' + salt).hexdigest()
+    return render_to_response('sitepass.html', {'title': 'Concrete5 Password Generation Utility', 'hash': hash, 'form': form})
