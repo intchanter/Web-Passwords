@@ -23,6 +23,11 @@ def oscommerce(request):
             hash = md5(salt + password).hexdigest() + ':' + salt
     return render_to_response('sitepass.html', {'title': 'osCommerce Password Generation Utility', 'hash': hash, 'form': form})
 
+def zencart(request):
+    '''TODO: make this work the same as oscommerce(), but with the right
+strings'''
+    return oscommerce(request)
+
 def joomla(request):
     hash = None
     form = forms.JoomlaForm()
