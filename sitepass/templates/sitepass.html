@@ -4,20 +4,26 @@
 <link rel="stylesheet" href="/style/">
 </head>
 <body>
-<h1>{{ title }}</h1>
-{% if hash %}
-<div class="result">
-  <dl>
-    <dt>Database entry:</dt>
-    <dd>{{ hash }}</dd>
-  </dl>
+<div>
+  <h1>{{ title }}</h1>
+  {% if hash %}
+  <div class="result">
+    <dl>
+      <dt>Database entry:</dt>
+      <dd>{{ hash }}</dd>
+    </dl>
+  </div>
+  {% endif %}
+  <div class="password_form">
+    <form action="" method="POST">
+      {{ form.as_p }}
+      <p><input type="submit" value="submit"></p>
+    </form>
+  </div>
+  <div>
+    <h2>How to use this form:</h2>
+    {{ help_text|safe }}
+  </div>
 </div>
-{% endif %}
-<div class="password_form">
-  <form action="" method="POST">
-    {{ form.as_p }}
-    <p><input type="submit" value="submit"></p>
-  </form>
-<form>
 </body>
 </html>
