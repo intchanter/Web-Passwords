@@ -2,15 +2,11 @@
 
 from django.shortcuts import render_to_response
 from hashlib import md5
-from random import choice
 import string
 import forms
 
-def randstring(charset, length):
-    chars = []
-    for x in range(length):
-        chars.append(choice(charset))
-    return ''.join(chars)
+def joomla(request):
+    pass
 
 def oscommerce(request):
     hash = None
@@ -27,17 +23,6 @@ def zencart(request):
     '''TODO: make this work the same as oscommerce(), but with the right
 strings'''
     return oscommerce(request)
-
-def joomla(request):
-    hash = None
-    form = forms.JoomlaForm()
-    if request.method == 'POST':
-        form = forms.JoomlaForm(request.POST)
-        if form.is_valid():
-            password = string.strip(request.POST['password'])
-            salt = randstring(string.ascii_letters + string.digits, 32)
-            hash = md5(password + salt).hexdigest() + ':' + salt
-    return render_to_response('sitepass.html', {'title': 'Joomla Password Generation Utility', 'hash': hash, 'form': form})
 
 def concrete5(request):
     hash = None

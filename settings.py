@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'passwords.sitepass',
+    'passwords.styles',
 )
 
 # Optionally override settings for development below.  That allows this file

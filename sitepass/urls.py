@@ -2,8 +2,7 @@ from django.conf.urls.defaults import *
 from views import *
 
 urlpatterns = patterns('',
-    ('^joomla/$', joomla),
-    ('^oscommerce/$', oscommerce),
-    ('^concrete5/$', concrete5),
-    #('', .),
+    (r'^joomla/$', joomla),
+    (r'^oscommerce/$', oscommerce),
+    (r'^concrete5/$', concrete5),
 )

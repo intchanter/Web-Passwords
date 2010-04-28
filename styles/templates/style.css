@@ -1,0 +1,31 @@
+body {
+    color: #048;
+    background-color: #fff;
+    padding: 30px;
+    font-family: Courier;
+    font-size: 20px;
+}
+
+h1 {
+    text-align: center;
+    border: 1px #030 solid;
+    padding: 5px;
+    font-size: 40px;
+    color: #0b0;
+}
+
+input {
+    background-color: #beb;
+    color: #048;
+    border: 1px solid #030;
+    font-family: Courier;
+    padding: 2px;
+    font-size: 20px;
+}
+
+label {
+    background-color: #fff;
+    border: 1px solid #030;
+    padding: 2px;
+    color: #0b0;
+}
