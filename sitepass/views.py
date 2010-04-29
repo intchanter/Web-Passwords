@@ -6,6 +6,7 @@ from frameworks import *
 framework_link = {
     'concrete5': concrete5,
     'cubecart': cubecart,
+    'drupal': drupal,
     'joomla': joomla,
     'magento': magento,
     'oscommerce': oscommerce,
