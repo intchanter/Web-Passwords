@@ -9,7 +9,7 @@ help_text = '''<p>help_text</p>'''
 form_class = CubeCartForm
 
 def hash(form):
-    salt = randstring(6)
+    salt = randstring(alphanum, 6)
     password = form.cleaned_data['password']
     salt_hash = md5(salt).hexdigest()
     pass_hash = md5(password).hexdigest()
