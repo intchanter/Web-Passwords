@@ -11,4 +11,4 @@ form_class = JoomlaForm
 def hash(form):
     password = form.cleaned_data['password']
     salt = randstring(alphanum, 32)
-    return md5(salt + password).hexdigest() + ':' + salt
+    return md5(password + salt).hexdigest() + ':' + salt
