@@ -8,7 +8,7 @@ import forms
 def joomla(request):
     pass
 
-def oscommerce(request):
+def aoeuoscommerce(request):
     hash = None
     form = forms.OSCommerceForm()
     if request.method == 'POST':
@@ -35,14 +35,14 @@ def concrete5(request):
             hash = md5(password + ':' + salt).hexdigest()
     return render_to_response('sitepass.html', {'title': 'Concrete5 Password Generation Utility', 'hash': hash, 'form': form})
 
-from frameworks import joomla
+from frameworks import joomla, oscommerce, zencart, concrete5, cubecart
 
 framework_link = {
-    #'concrete5': concrete5,
-    #'cubecart': cubecart,
+    'concrete5': concrete5,
+    'cubecart': cubecart,
     'joomla': joomla,
-    #'oscommerce': oscommerce,
-    #'zencart': zencart,
+    'oscommerce': oscommerce,
+    'zencart': zencart,
 }
 
 def sitepass(request, framework):
