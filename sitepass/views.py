@@ -1,12 +1,13 @@
 # Create your views here.
 
 from django.shortcuts import render_to_response
-from frameworks import joomla, oscommerce, zencart, concrete5, cubecart
+from frameworks import *
 
 framework_link = {
     'concrete5': concrete5,
     'cubecart': cubecart,
     'joomla': joomla,
+    'magento': magento,
     'oscommerce': oscommerce,
     'zencart': zencart,
 }

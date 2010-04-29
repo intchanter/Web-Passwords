@@ -9,6 +9,9 @@ class Concrete5Form(BasicForm):
 class CubeCartForm(BasicForm):
     pass
 
+class MagentoForm(BasicForm):
+    pass
+
 class JoomlaForm(BasicForm):
     pass
 
