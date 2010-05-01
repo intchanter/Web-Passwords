@@ -6,7 +6,7 @@
 # Shorten specifying full paths
 # TODO: find this code
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
