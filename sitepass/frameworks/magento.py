@@ -1,12 +1,11 @@
 from sitepass.randstring import randstring, alphanum
-from sitepass.forms import MagentoForm
 from hashlib import md5
 
 title = 'Generate Magento Password Hash'
 
 help_text = '''<p>help_text</p>'''
 
-form_class = MagentoForm
+from sitepass.forms import MagentoForm as form_class
 
 def hash(form):
     password = form.cleaned_data['password']

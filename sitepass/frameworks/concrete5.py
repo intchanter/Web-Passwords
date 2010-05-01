@@ -1,11 +1,10 @@
-from sitepass.forms import Concrete5Form
 from hashlib import md5
 
 title = 'Generate Concrete5 Password Hash'
 
 help_text = '''<p>help_text</p>'''
 
-form_class = Concrete5Form
+from sitepass.forms import Concrete5Form as form_class
 
 def hash(form):
     password = form.cleaned_data['password']

@@ -1,12 +1,11 @@
 from sitepass.randstring import randstring, alphanum
-from sitepass.forms import OSCommerceForm
 from hashlib import md5
 
 title = 'Generate OSCommerce Password Hash'
 
 help_text = '''<p>help_text</p>'''
 
-form_class = OSCommerceForm
+from sitepass.forms import OSCommerceForm as form_class
 
 def hash(form):
     password = form.cleaned_data['password']

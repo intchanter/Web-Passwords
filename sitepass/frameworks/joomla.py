@@ -1,12 +1,11 @@
 from sitepass.randstring import randstring, alphanum
-from sitepass.forms import JoomlaForm
 from hashlib import md5
 
 title = 'Generate Joomla Password Hash'
 
 help_text = '''<p>help_text</p>'''
 
-form_class = JoomlaForm
+from sitepass.forms import JoomlaForm as form_class
 
 def hash(form):
     password = form.cleaned_data['password']

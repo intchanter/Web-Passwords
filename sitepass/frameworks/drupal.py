@@ -1,11 +1,10 @@
-from sitepass.forms import DrupalForm
 from hashlib import md5
 
 title = 'Generate Drupal Password Hash'
 
 help_text = '''<p>help_text</p>'''
 
-form_class = DrupalForm
+from sitepass.forms import DrupalForm as form_class
 
 def hash(form):
     password = form.cleaned_data['password']

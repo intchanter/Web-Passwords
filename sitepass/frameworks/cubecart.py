@@ -1,12 +1,11 @@
 from sitepass.randstring import randstring, alphanum
-from sitepass.forms import CubeCartForm
 from hashlib import md5
 
 title = "Generate CubeCart Password Hash"
 
 help_text = '''<p>help_text</p>'''
 
-form_class = CubeCartForm
+from sitepass.forms import CubeCartForm as form_class
 
 def hash(form):
     salt = randstring(alphanum, 6)
