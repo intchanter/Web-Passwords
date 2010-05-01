@@ -1,6 +1,7 @@
 # Create your views here.
 
 from django.shortcuts import render_to_response
+from django.http import Http404
 from frameworks import *
 
 framework_link = {
@@ -15,7 +16,10 @@ framework_link = {
 
 def sitepass(request, framework):
     hash = None
-    pieces = framework_link[framework]
+    try:
+        pieces = framework_link[framework]
+    except KeyError:
+        raise Http404
     if request.method == 'POST':
         form = pieces.form_class(request.POST)
         if form.is_valid():
