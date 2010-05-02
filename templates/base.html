@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>{% block title %}{% endblock title%}</title>
+  <link rel="stylesheet" href="/style/">
+</head>
+<body>
+<div id="page-wrapper">
+  <div id="header">
+    <h1>Header</h1>
+  </div>
+  <div id="sidebar">
+    <ul class="menu">
+      <li>Create Password Hash
+        {% block sitepass_menu %}{% endblock sitepass_menu %}
+      </li>
+    </ul>
+  </div>
+  <div id="content">
+    {% block content %}{% endblock content %}
+  </div>
+  <div id="footer">
+    <p>This site and content &copy;2010 Intchanter</p>
+  </div>
+</div>
+</body>
+</html>
