@@ -1,0 +1,6 @@
+Dependencies:
+- Python
+- Python packages:
+  - Django
+  - Django-Articles
+- Database system

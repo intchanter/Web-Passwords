@@ -92,6 +92,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'passwordsoup.sitepass',
     'passwordsoup.styles',
+    'articles',
 )
 
 # Optionally override settings for development below.  That allows this file
