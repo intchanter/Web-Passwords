@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'passwordsoup.sitepass',
     'passwordsoup.styles',
     'articles',
+    'articles.admin',
 )
 
 # Optionally override settings for development below.  That allows this file
