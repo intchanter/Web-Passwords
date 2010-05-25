@@ -14,6 +14,19 @@ framework_link = {
     'zencart': zencart,
 }
 
+def menu(request):
+    print framework_link.keys()
+    frameworks = framework_link.sort()
+    data = (
+        #framework,
+        {
+            'name': framework_link[framework].name,
+            'url': framework_link[framework].url,
+        }
+        for framework in frameworks
+    )
+    return render_to_response('menu.html', {'items': data})
+
 def sitepass(request, framework):
     hash = None
     try:

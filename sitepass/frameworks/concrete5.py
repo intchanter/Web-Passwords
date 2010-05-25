@@ -1,6 +1,8 @@
 from hashlib import md5
 
-title = 'Generate Concrete5 Password Hash'
+name = 'Concrete5'
+url = 'concrete5'
+title = 'Generate %s Password Hash' % name
 
 help_text = '''<p>help_text</p>'''
 

@@ -1,7 +1,9 @@
 from sitepass.randstring import randstring, alphanum
 from hashlib import md5
 
-title = "Generate CubeCart Password Hash"
+name = 'CubeCart'
+url = 'cubecart'
+title = 'Generate %s Password Hash' % name
 
 help_text = '''<p>help_text</p>'''
 

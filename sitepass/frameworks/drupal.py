@@ -1,6 +1,8 @@
 from hashlib import md5
 
-title = 'Generate Drupal Password Hash'
+name = 'Drupal'
+url = 'drupal'
+title = 'Generate %s Password Hash' % name
 
 help_text = '''<p>help_text</p>'''
 
