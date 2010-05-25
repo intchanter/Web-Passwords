@@ -1,0 +1,42 @@
+Todo items
+==========
+
+Articles
+--------
+- Create a queue of at least five articles
+- Get django-articles working with article entry interface and ReST
+- Define article quality standards
+- Start posting articles
+
+Hash Generators
+---------------
+- Add support for phpass and frameworks that use it
+  - Wordpress
+  - Drupal 7 and beyond
+- Create top-level menu
+- Create top-level target
+- Add detailed instructions for existing frameworks:
+  - Concrete5
+  - CubeCart
+  - Drupal
+  - Joomla
+  - Magento
+  - osCommerce
+  - Zen Cart
+
+Media
+-----
+- Create directories for:
+  - Images
+    - Subdirectories for article- or framework-specific images?
+  - CSS
+  - ECMAScript
+
+Site
+----
+- Create an assortment of password logos
+- Establish random-generation view for password logo
+- Put together stylized version of "Password Soup" for header
+- Create top-level menu
+- Set up basic analytics
+
