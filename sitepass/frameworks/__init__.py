@@ -6,4 +6,5 @@ __all__ = [
     'magento',
     'oscommerce',
     'zencart',
+    'zenphoto',
 ]

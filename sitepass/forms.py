@@ -12,10 +12,10 @@ class CubeCartForm(BasicForm):
 class DrupalForm(BasicForm):
     pass
 
-class MagentoForm(BasicForm):
+class JoomlaForm(BasicForm):
     pass
 
-class JoomlaForm(BasicForm):
+class MagentoForm(BasicForm):
     pass
 
 class OSCommerceForm(BasicForm):
@@ -23,3 +23,7 @@ class OSCommerceForm(BasicForm):
 
 class ZenCartForm(BasicForm):
     pass
+
+class ZenPhotoForm(BasicForm):
+    user = forms.CharField()
+    extra_auth_hash_text = forms.CharField()

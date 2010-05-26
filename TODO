@@ -13,6 +13,10 @@ Hash Generators
 - Add support for phpass and frameworks that use it
   - Wordpress
   - Drupal 7 and beyond
+- Add more frameworks
+  - Wordpress
+  - Drupal 7
+  - Agoracart
 - Create top-level menu
 - Create top-level target
 - Add detailed instructions for existing frameworks:

@@ -12,6 +12,7 @@ framework_link = {
     'magento': magento,
     'oscommerce': oscommerce,
     'zencart': zencart,
+    'zenphoto': zenphoto,
 }
 
 def menu(request):
