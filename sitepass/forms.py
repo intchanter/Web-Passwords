@@ -26,4 +26,4 @@ class ZenCartForm(BasicForm):
 
 class ZenPhotoForm(BasicForm):
     user = forms.CharField()
-    extra_auth_hash_text = forms.CharField()
+    extra_auth_hash_text = forms.CharField(required=False)

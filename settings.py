@@ -2,6 +2,7 @@
 
 # This file should get all non-sensitive production settings.
 # DATABASE_PASSWORD will go in localsettings.py, outside version control.
+from localsettings import DATABASE_PASSWORD
 
 # Shorten specifying full paths
 # TODO: find this code
@@ -15,6 +16,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql',
+        'NAME': 'intchant_passwords',
+        'USER': 'intchant_passwd',
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': '',
+        'PORT': '',
+    },
+}
 # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_ENGINE = 'mysql'
 # Or path to database file if using sqlite3.
@@ -66,13 +77,14 @@ SECRET_KEY = 'jhl(%2tghn8+rz#)72_+i-(-usethk42$t2^9l4eb8w=wq&y-4'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
+#    'django.template.loaders.eggs.load_template_source',
 )
 
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #'django.contrib.sessions.middleware.SessionMiddleware',
+    #'django.contrib.auth.middleware.AuthenticationMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
 )
 
 ROOT_URLCONF = 'passwordsoup.urls'
@@ -93,7 +105,6 @@ INSTALLED_APPS = (
     'passwordsoup.sitepass',
     'passwordsoup.styles',
     'articles',
-    'articles.admin',
 )
 
 # Optionally override settings for development below.  That allows this file
