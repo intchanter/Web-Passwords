@@ -9,9 +9,9 @@ urlpatterns = patterns('',
     (r'^hash/', include('passwordsoup.sitepass.urls')),
     (r'^articles/', include('articles.urls')),
 
-    (r'^admin/', include(admin.site.urls)),
     #(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/webalizer/', include('webalizer.urls')),
+    (r'^admin/', include(admin.site.urls)),
 
     (r'', include('passwordsoup.home.urls')),
 )
