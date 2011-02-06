@@ -26,6 +26,11 @@
   </dl>
 </div>
 {% endif %}
+{% if error %}
+<div class="error">
+  <p>{{ error }}</p>
+</div>
+{% endif %}
 <div class="password_form">
   <form action="" method="POST">
     {{ form.as_p }}

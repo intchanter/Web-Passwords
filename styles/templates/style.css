@@ -36,6 +36,10 @@ div#content {
     float: right;
 }
 
+div.error {
+    background-color: #f77;
+}
+
 div#footer {
     bottom: 0px;
     clear: both;

@@ -3,6 +3,7 @@
 from django.shortcuts import render_to_response
 from django.http import Http404
 from frameworks import *
+#import frameworks
 
 framework_link = {
     'concrete5': concrete5,
@@ -16,8 +17,9 @@ framework_link = {
 }
 
 def menu(request):
-    print framework_link.keys()
-    frameworks = framework_link.sort()
+    #print framework_link.keys()
+    frameworks = framework_link.keys()
+    frameworks.sort()
     data = (
         #framework,
         {
@@ -30,6 +32,7 @@ def menu(request):
 
 def sitepass(request, framework):
     hash = None
+    error = None
     try:
         pieces = framework_link[framework]
     except KeyError:
@@ -37,13 +40,17 @@ def sitepass(request, framework):
     if request.method == 'POST':
         form = pieces.form_class(request.POST)
         if form.is_valid():
-            hash = pieces.hash(form)
+            try:
+                hash = pieces.hash(form)
+            except UnicodeEncodeError:
+                error = 'For the purposes of this form, only enter plain ASCII passwords.'
     else:
         form = pieces.form_class()
     fillers = {
         'title': pieces.title,
         'hash': hash,
         'form': form,
+        'error': error,
         'help_text': pieces.help_text,
     }
     return render_to_response('sitepass.html', fillers)
