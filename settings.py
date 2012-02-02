@@ -106,6 +106,7 @@ INSTALLED_APPS = (
     'passwordsoup.styles',
     'articles',
     'webalizer',
+    'south',
 )
 
 # Optionally override settings for development below.  That allows this file
