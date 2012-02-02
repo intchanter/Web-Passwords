@@ -2,3 +2,5 @@
 localsettings.py
 *.sqlite
 *.swp
+log
+tmp
