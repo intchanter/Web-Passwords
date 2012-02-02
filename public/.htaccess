@@ -1,0 +1,3 @@
+#<IfModule mod_passenger>
+PassengerResolveSymlinksInDocumentRoot On
+#</IfModule>
