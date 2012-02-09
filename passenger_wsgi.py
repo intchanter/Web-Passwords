@@ -7,13 +7,13 @@ if sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)
 
 
 # Path to the directory from which Django can be imported
-sys.path.append('/home7/intchant/.local/lib/python-2.6/site-packages')
+#sys.path.append('/home7/intchant/.local/lib/python-2.6/site-packages')
 # Path to the directory from which apps can be imported
-sys.path.append('/home7/intchant/django/passwordsoup')
+sys.path.append('/var/www/passwordsoup')
 # Path to the directory from which my app can be imported
-sys.path.append('/home7/intchant/django')
+sys.path.append('/var/www')
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'passwordsoup.settings'
 
 from django.core.handlers import wsgi
 application = wsgi.WSGIHandler()

@@ -18,7 +18,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': 'intchant_passwords',
         'USER': 'intchant_passwd',
         'PASSWORD': DATABASE_PASSWORD,
@@ -75,8 +75,8 @@ SECRET_KEY = 'jhl(%2tghn8+rz#)72_+i-(-usethk42$t2^9l4eb8w=wq&y-4'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
 #    'django.template.loaders.eggs.load_template_source',
 )
 
@@ -93,6 +93,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/var/www/passwordsoup/templates',
 )
 
 INSTALLED_APPS = (
@@ -105,7 +106,7 @@ INSTALLED_APPS = (
     'passwordsoup.sitepass',
     'passwordsoup.styles',
     'articles',
-    'webalizer',
+    #'webalizer',
     'south',
 )
 
