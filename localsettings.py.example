@@ -3,9 +3,8 @@ import sys
 LOCAL_IMPORT_PATH = '/var/www/passwordsoup'
 sys.path.insert(LOCAL_IMPORT_PATH, 0)
 
-# This is production, so we don't want these enabled
-DEBUG = False
-TEMPLATE_DEBUG = False
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 # Put your 
 DEFAULT_DATABASE = {
