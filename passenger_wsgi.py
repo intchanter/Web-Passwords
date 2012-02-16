@@ -1,3 +1,5 @@
+#!/bin/env python
+
 import os, sys
 
 INTERP = "/usr/bin/python2.6"
