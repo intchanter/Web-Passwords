@@ -1,5 +1,5 @@
 # Create your views here.
-from passwordsoup.sitepass.views import menu
+from sitepass.views import menu
 from articles.views import display_blog_page
 from django.shortcuts import render_to_response
 

@@ -2,13 +2,14 @@
 
 # This file should get all non-sensitive production settings.
 # DATABASE_PASSWORD will go in localsettings.py, outside version control.
-from localsettings import DATABASE_PASSWORD
+from localsettings import DEFAULT_DATABASE
 
 # Shorten specifying full paths
 # TODO: find this code
 
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+# Override this in localsettings.py for production!
+DEBUG = True
+TEMPLATE_DEBUG = True
 
 ADMINS = (
     # ('Your Name', 'your_email@domain.com'),
@@ -17,27 +18,8 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'intchant_passwords',
-        'USER': 'intchant_passwd',
-        'PASSWORD': DATABASE_PASSWORD,
-        'HOST': '',
-        'PORT': '',
-    },
+    'default': DEFAULT_DATABASE,
 }
-# 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_ENGINE = 'mysql'
-# Or path to database file if using sqlite3.
-DATABASE_NAME = 'intchant_passwords'
-# Not used with sqlite3.
-DATABASE_USER = 'intchant_passwd'
-# Not used with sqlite3.
-DATABASE_PASSWORD = ''
-# Set to empty string for localhost. Not used with sqlite3.
-DATABASE_HOST = ''
-# Set to empty string for default. Not used with sqlite3.
-DATABASE_PORT = ''
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -71,6 +53,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
+# Also, override it in localsettings.py for production.
 SECRET_KEY = 'jhl(%2tghn8+rz#)72_+i-(-usethk42$t2^9l4eb8w=wq&y-4'
 
 # List of callables that know how to import templates from various sources.
@@ -87,7 +70,7 @@ MIDDLEWARE_CLASSES = (
     #'django.middleware.csrf.CsrfViewMiddleware',
 )
 
-ROOT_URLCONF = 'passwordsoup.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -103,8 +86,8 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.admindocs',
-    'passwordsoup.sitepass',
-    'passwordsoup.styles',
+    'sitepass',
+    'styles',
     'articles',
     #'webalizer',
     'south',

@@ -1,0 +1,19 @@
+import sys
+
+LOCAL_IMPORT_PATH = '/var/www/passwordsoup'
+sys.path.insert(LOCAL_IMPORT_PATH, 0)
+
+DEBUG = True
+TEMPLATE_DEBUG = True
+
+# Put your 
+DEFAULT_DATABASE = {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': '',
+    'USER': '',
+    'PASSWORD': '',
+    'HOST': '',
+    'PORT': '',
+}
+
+SECRET_KEY = 'g18XGMk"C7]wpaN(NUR1R/FIs1O4LQ(.!XVmeZT"&$9>@mb"f)V&2V}Z&D'
