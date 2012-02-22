@@ -2,20 +2,6 @@
 
 {% block title %}{{ title }}{% endblock title%}
 
-{% block sitepass_menu %}
-<ul class="submenu">
-  {{ menu }}
-  <li><a href="/hash/concrete5">Concrete5</a></li>
-  <li><a href="/hash/cubecart">CubeCart</a></li>
-  <li><a href="/hash/drupal">Drupal</a></li>
-  <li><a href="/hash/joomla">Joomla</a></li>
-  <li><a href="/hash/magento">Magento</a></li>
-  <li><a href="/hash/oscommerce">osCommerce</a></li>
-  <li><a href="/hash/zencart">Zen Cart</a></li>
-  <li><a href="/hash/zenphoto">Zen Photo</a></li>
-</ul>
-{% endblock sitepass_menu %}
-
 {% block content %}
 <h1>{{ title }}</h1>
 {% if hash %}

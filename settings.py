@@ -1,8 +1,14 @@
 # Django settings for passwords project.
 
+import sys
+sys.path.insert(0, '.')
+
 # This file should get all non-sensitive production settings.
 # DATABASE_PASSWORD will go in localsettings.py, outside version control.
 from localsettings import DEFAULT_DATABASE
+
+# Bring in the root directory from the local settings
+from localsettings import ROOT
 
 # Shorten specifying full paths
 # TODO: find this code
@@ -76,7 +82,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/var/www/passwordsoup/templates',
+    ROOT + '/templates',
 )
 
 INSTALLED_APPS = (

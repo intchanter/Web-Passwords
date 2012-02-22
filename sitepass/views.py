@@ -1,6 +1,7 @@
 # Create your views here.
 
 from django.shortcuts import render_to_response
+from django.template.loader import render_to_string
 from django.http import Http404
 from frameworks import *
 #import frameworks
@@ -28,7 +29,7 @@ def menu(request):
         }
         for framework in frameworks
     )
-    return render_to_response('menu.html', {'items': data})
+    return render_to_string('menu.html', {'items': data})
 
 def sitepass(request, framework):
     hash = None
@@ -52,5 +53,6 @@ def sitepass(request, framework):
         'form': form,
         'error': error,
         'help_text': pieces.help_text,
+        'menu': menu(request),
     }
     return render_to_response('sitepass.html', fillers)
