@@ -1,7 +1,7 @@
 import sys
 
-LOCAL_IMPORT_PATH = '/var/www/passwordsoup'
-sys.path.insert(LOCAL_IMPORT_PATH, 0)
+# This is the directory where the server is running
+ROOT = '/var/www/passwordsoup'
 
 DEBUG = True
 TEMPLATE_DEBUG = True
