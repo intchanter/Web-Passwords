@@ -1,26 +1,39 @@
-<html>
+<!doctype html>
 <head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="<!-- TODO: add meta content block -->"/> 
   <title>{% block title %}{% endblock title%}</title>
-  <link rel="stylesheet" href="/style/">
+  <link rel="stylesheet" href="/media/styles/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
+  <script src="/media/js/libs/modernizr-2.5.2.min.js"></script>
 </head>
+
 <body>
-<div id="page-wrapper">
-  <div id="header">
+<div id="wrap">
+  <header id="header">
     <h1><a href="/">Password Soup</a></h1>
-  </div>
-  <div id="sidebar">
+  <nav id="nav">
     <ul class="menu">
       <li>Create Password Hash
         {% block sitepass_menu %}{{ menu|safe }}{% endblock sitepass_menu %}
       </li>
     </ul>
-  </div>
-  <div id="content">
+  </nav>
+  </header>
+
+  <div role="main" id="main">
     {% block content %}{% endblock content %}
   </div>
-  <div id="footer">
+  </div> <!-- end wrap -->
+  <footer id="footer">
     <p>This site and content &copy;2012 Intchanter</p>
-  </div>
-</div>
+  </footer>
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID. mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
 </body>
 </html>
