@@ -2,6 +2,7 @@ import sys
 
 # This is the directory where the server is running
 ROOT = '/var/www/passwordsoup'
+HOST = 'www.passwordsoup.com'
 
 DEBUG = True
 TEMPLATE_DEBUG = True

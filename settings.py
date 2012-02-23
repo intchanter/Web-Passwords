@@ -7,8 +7,11 @@ sys.path.insert(0, '.')
 # DATABASE_PASSWORD will go in localsettings.py, outside version control.
 from localsettings import DEFAULT_DATABASE
 
-# Bring in the root directory from the local settings
-from localsettings import ROOT
+# Bring in the hostname and root directory from the local settings
+from localsettings import ROOT, HOST
+
+STATIC_ROOT = ROOT + '/public/static'
+STATIC_URL = 'http://' + HOST + '/static/'
 
 # Shorten specifying full paths
 # TODO: find this code
@@ -53,11 +56,6 @@ MEDIA_ROOT = ''
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = ''
 
-# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
-# trailing slash.
-# Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/media/'
-
 # Make this unique, and don't share it with anybody.
 # Also, override it in localsettings.py for production.
 SECRET_KEY = 'jhl(%2tghn8+rz#)72_+i-(-usethk42$t2^9l4eb8w=wq&y-4'
@@ -90,6 +88,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    #'django.contrib.staticfiles',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'sitepass',
