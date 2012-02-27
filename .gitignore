@@ -5,3 +5,4 @@ localsettings.py
 log
 tmp
 passwordsoup.git
+.DS_Store
