@@ -14,12 +14,8 @@
 <div id="wrap">
   <header id="header">
     <h1><a href="/">Password Soup</a></h1>
-  <nav id="nav">
-    <ul class="menu">
-      <li>Create Password Hash
-        {% block sitepass_menu %}{{ menu|safe }}{% endblock sitepass_menu %}
-      </li>
-    </ul>
+  <nav id="nav">      
+    {% block sitepass_menu %}{{ menu|safe }}{% endblock sitepass_menu %}
   </nav>
   </header>
 
