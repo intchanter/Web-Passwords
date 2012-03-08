@@ -6,3 +6,4 @@ log
 tmp
 passwordsoup.git
 .DS_Store
+*.esproj
