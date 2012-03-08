@@ -7,18 +7,15 @@
   <link rel="stylesheet" href="/static/styles/style.css">
   <link href='http://fonts.googleapis.com/css?family=Nixie+One' rel='stylesheet' type='text/css'>
   <script src="/static/js/libs/modernizr-2.5.2.min.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 
 <body>
 <div id="wrap">
   <header id="header">
     <h1><a href="/">Password Soup</a></h1>
-  <nav id="nav">
-    <ul class="menu">
-      <li>Create Password Hash
-        {% block sitepass_menu %}{{ menu|safe }}{% endblock sitepass_menu %}
-      </li>
-    </ul>
+  <nav id="nav">      
+    {% block sitepass_menu %}{{ menu|safe }}{% endblock sitepass_menu %}
   </nav>
   </header>
 
@@ -27,7 +24,7 @@
   </div>
   </div> <!-- end wrap -->
   <footer id="footer">
-    <p>This site and content &copy;2012 Intchanter</p>
+    <p>This site and content &copy;2012 Intchanter(even though we aren't really for this whole &copy; thing</p>
   </footer>
   <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID. mathiasbynens.be/notes/async-analytics-snippet -->
   <script>
