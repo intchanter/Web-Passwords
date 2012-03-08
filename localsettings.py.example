@@ -17,4 +17,9 @@ DEFAULT_DATABASE = {
     'PORT': '',
 }
 
+ADMINS = (
+    # ('Your Name', 'user@domain.com'),
+)
+MANAGERS = ADMINS
+
 SECRET_KEY = 'g18XGMk"C7]wpaN(NUR1R/FIs1O4LQ(.!XVmeZT"&$9>@mb"f)V&2V}Z&D'

@@ -22,8 +22,6 @@ Hash Generators
   - Wordpress
   - Drupal 7
   - Agoracart
-- Create top-level menu
-- Create top-level target
 - Add detailed instructions for existing frameworks:
   - Concrete5
   - CubeCart
@@ -46,7 +44,6 @@ Site
 - Create an assortment of password logos
 - Establish random-generation view for password logo
 - Put together stylized version of "Password Soup" for header
-- Create top-level menu
 - Set up basic analytics
 - Experiment with different color and style schemes
 - Choose an initial launch theme

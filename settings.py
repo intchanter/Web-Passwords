@@ -20,11 +20,7 @@ STATIC_URL = 'http://' + HOST + '/static/'
 DEBUG = True
 TEMPLATE_DEBUG = True
 
-ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
-)
-
-MANAGERS = ADMINS
+from localsettings import ADMINS, MANAGERS
 
 DATABASES = {
     'default': DEFAULT_DATABASE,
